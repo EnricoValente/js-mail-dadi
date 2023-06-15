@@ -6,8 +6,23 @@
 // Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 
 
-let player = Math.floor(Math.random() * 6) + 1;
-console.log('player', player, typeof player);
+let myButton = document.getElementById('my-button');
 
-let computer = Math.floor(Math.random() * 6) + 1;
-console.log('computer', computer, typeof computer);
+myButton.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let firstNumber = Math.floor(Math.random() * 6) + 1;
+    let secondNumber = Math.floor(Math.random() * 6) + 1;
+    
+})
+
+
+
+
+
+
+
+
+
+
+
