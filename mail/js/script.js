@@ -15,7 +15,8 @@
 
 const form = document.getElementById('email-form');
 
-form.addEventListener('submit', function() {
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
     const userEmail = document.getElementById('user-email').value; 
     console.log('userEmail', userEmail, typeof userEmail);
@@ -62,9 +63,11 @@ form.addEventListener('submit', function() {
         
        
     if(emailFound == true) {
+        document.getElementById('validation-email').innerHTML = 'Email valida';
         console.log('Email valida');
      }
      else {
+        document.getElementById('validation-email').innerHTML = 'Accesso non consentito';
          console.log('accesso non consentito');
      }
       
