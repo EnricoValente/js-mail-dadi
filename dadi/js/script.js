@@ -19,7 +19,12 @@ myButton.addEventListener('click', function (e) {
     document.getElementById('second-number').innerHTML = secondNumber;
     document.getElementById('total-score').innerHTML = 'Il punteggio totale è :' + totalScore;
 
-    
+    if(totalScore > 10) {
+        document.getElementById('total-score').innerHTML = 'Ha vinto il giocatore'
+    }
+    else {
+        document.getElementById('total-score').innerHTML = 'Ha vinto il computer'
+    }
 })
 
 
