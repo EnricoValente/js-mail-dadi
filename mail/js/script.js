@@ -13,8 +13,24 @@
 
 */
 
+let form = document.getElementById('email-form');
 
+form.addEventListener('submit', function() {
 
+    let userEmail = document.getElementById('user-email');
+    console.log('userEmail', userEmail, typeof userEmail);
+    
+    let listEmail = ['luca@boolean.com', 'francesco@boolean.com', 'federico@boolean.com', 'martina@boolean.com']
+    console.log('listEmail', listEmail, typeof listEmail);
+
+    if(userEmail != listEmail) {
+        console.log('Email non valida');
+    }
+    else {
+        console.log('accesso consentito');
+    }
+    
+})
 
 
 
