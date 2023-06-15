@@ -13,22 +13,61 @@
 
 */
 
-let form = document.getElementById('email-form');
+const form = document.getElementById('email-form');
 
 form.addEventListener('submit', function() {
 
-    let userEmail = document.getElementById('user-email');
+    const userEmail = document.getElementById('user-email').value; 
     console.log('userEmail', userEmail, typeof userEmail);
+
+    // Controlla che email sia valida (non è un numero)
+
     
-    let listEmail = ['luca@boolean.com', 'francesco@boolean.com', 'federico@boolean.com', 'martina@boolean.com']
+    const listEmail = [
+        'luca@boolean.com',
+        'francesco@boolean.com',
+        'federico@boolean.com',
+        'martina@boolean.com',
+        'roberto@boolean.com',
+        'matteo@boolean.com',
+        'arianna@boolean.com',
+        'giorgia@boolean.com',
+        'giovanni@boolean.com',
+        'letizia@boolean.com',
+        'giuseppe@boolean.com',
+        'ginevra@boolean.com',
+    ]
+    
     console.log('listEmail', listEmail, typeof listEmail);
 
-    if(userEmail != listEmail) {
-        console.log('Email non valida');
+    let emailFound = false
+    let i = 0
+
+
+    
+    for(i=0; i < listEmail.length; i++) {
+
+        
+
+        if (userEmail == listEmail[i]) {
+
+            emailFound = true;
+
+            console.log(listEmail[i]);
+            
+        }
+        
     }
-    else {
-        console.log('accesso consentito');
-    }
+       
+        
+       
+    if(emailFound == true) {
+        console.log('Email valida');
+     }
+     else {
+         console.log('accesso non consentito');
+     }
+      
     
 })
 
