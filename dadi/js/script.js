@@ -13,6 +13,12 @@ myButton.addEventListener('click', function (e) {
 
     let firstNumber = Math.floor(Math.random() * 6) + 1;
     let secondNumber = Math.floor(Math.random() * 6) + 1;
+    let totalScore = firstNumber + secondNumber;
+
+    document.getElementById('first-number').innerHTML = 'Hai fatto' + firstNumber + ',';
+    document.getElementById('second-number').innerHTML = secondNumber;
+    document.getElementById('total-score').innerHTML = 'Il punteggio totale è :' + totalScore;
+
     
 })
 
